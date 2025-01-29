@@ -1,0 +1,1 @@
+# Plants-Diseases-Detection-and-Solution-Recommendation
