@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Prediction</title>
+    <style>
+        /* Add a background image to the body */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            background-image: url('https://img.freepik.com/premium-photo/farming-digital-age-farmer-utilizing-mobile-app-realtime-crop-disease-analysis_38013-24902.jpg?w=1060');
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            overflow: auto; /* Prevent overflow */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px; /* Increased width */
+            margin: 0 auto;
+            padding: 20px; /* Added more padding */
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            overflow-y: auto; /* Prevent overflow */
+            max-height: 90vh; /* Limit the container height */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Increased spacing */
+            font-size: 24px; /* Increased font size */
+        }
+
+        form {
+            margin-bottom: 15px;
+            width: 80%;
+        }
+
+        .model-selection {
+            margin: 10px 0;
+        }
+
+        .model-selection label {
+            font-size: 14px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+            width: 80%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            margin-top: 15px;
+            max-width: 80%;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .predictions {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .predictions p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Plants Disease Detection & Solution Recommendation</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="image">Upload an image:</label>
+            <input type="file" name="image" id="image" required>
+            
+            <div class="model-selection">
+                <label>Select Model:</label><br>
+                <input type="radio" id="resnet50" name="model" value="ResNet50" required>
+                <label for="resnet50">ResNet50</label>
+                <input type="radio" id="alexnet" name="model" value="AlexNet" required>
+                <label for="alexnet">AlexNet</label>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if image_path %}
+            <div class="predictions">
+                <h2>Uploaded Image:</h2>
+                <img src="{{ image_path }}" alt="Uploaded Image">
+                
+                <h2>Prediction:</h2>
+                <p>Model ({{ selected_model }}): {{ prediction }}</p>
+
+                <button id="getSolutionButton" onclick="getSolution('{{ disease }}')">Get Solution</button>
+                <div id="solutionDiv" style="display:none;">
+                    <h3>Solution:</h3>
+                    <p id="solutionText"></p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function getSolution(disease) {
+            fetch('/get_solution', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'disease': disease })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('solutionText').innerText = data.solution;
+                document.getElementById('solutionDiv').style.display = 'block';
+            })
+            .catch(error => console.error('Error fetching solution:', error));
+        }
+    </script>
+</body>
+</html>
