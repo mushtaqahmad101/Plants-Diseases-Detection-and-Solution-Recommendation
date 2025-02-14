@@ -1,7 +1,7 @@
 </strong> - Plants Disease Detection & Solution Recommendation
 
 ### <em>Overview</em>
-The <strong>[Project Name]</strong> is an automated web application designed to detect plant diseases from images and recommend appropriate solutions. This multi-class classification model identifies specific diseases from a set of twelve categories. Once the disease is detected, the system provides a solution from a pre-defined database. The project is highly beneficial for early crop disease detection and for offering timely solutions to ensure the health of crops.
+The <strong>Plant Disease Detection and Solution Recommendation</strong> is an automated web application designed to detect plant diseases from images and recommend appropriate solutions. This multi-class classification model identifies specific diseases from a set of twelve categories. Once the disease is detected, the system provides a solution from a pre-defined database. The project is highly beneficial for early crop disease detection and for offering timely solutions to ensure the health of crops.
 
 ### <em>Features</em>
 <ul>
@@ -18,7 +18,7 @@ The <strong>[Project Name]</strong> is an automated web application designed to 
 1. <strong>Clone the Repository</strong><br>
    First, clone this repository to your local system using the following command:
    <pre><code>git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPOSITORY_NAME].git</code></pre>
-   Replace <em>[YOUR_USERNAME]</em> and <em>[YOUR_REPOSITORY_NAME]</em> with your actual GitHub username and repository name.
+   Replace <em>[mushtaqahmad101]</em> and <em>[Plant Disease Detection and Solution Recommendation]</em> with your actual GitHub username and repository name.
 
 2. <strong>Install Dependencies</strong><br>
    After cloning the repository, navigate to the project directory and install the necessary dependencies by running the following command:
@@ -66,7 +66,7 @@ Include information about your project’s license here, e.g., MIT, GPL, etc.
 
 ### <strong>Author</strong>
 
-- <strong>[Your Name]</strong> - <a href="[Your GitHub Profile URL]">[Your GitHub Profile URL]</a>
+- <strong>[Your Name]</strong> - <a href="[Your GitHub Profile URL]">[https://github.com/mushtaqahmad101/]</a>
 
 ---
 
