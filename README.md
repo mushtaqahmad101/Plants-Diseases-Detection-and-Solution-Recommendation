@@ -17,8 +17,8 @@ The <strong>Plant Disease Detection and Solution Recommendation</strong> is an a
 
 1. <strong>Clone the Repository</strong><br>
    First, clone this repository to your local system using the following command:
-   <pre><code>git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPOSITORY_NAME].git</code></pre>
-   Replace <em>[mushtaqahmad101]</em> and <em>[Plant Disease Detection and Solution Recommendation]</em> with your actual GitHub username and repository name.
+   <pre><code>git clone https://github.com/mushtaqahmad101/Plants-Disease-Detection-and-Solution-Recommendation.git</code></pre>
+   Replace <em>mushtaqahmad101</em> and <em>Plant Disease Detection and Solution Recommendation</em> with your actual GitHub username and repository name.
 
 2. <strong>Install Dependencies</strong><br>
    After cloning the repository, navigate to the project directory and install the necessary dependencies by running the following command:
@@ -66,7 +66,7 @@ Include information about your project’s license here, e.g., MIT, GPL, etc.
 
 ### <strong>Author</strong>
 
-- <strong>[Your Name]</strong> - <a href="[Your GitHub Profile URL]">[https://github.com/mushtaqahmad101/]</a>
+- <strong>Mushtaq Ahmad</strong> - <a href="[Your GitHub Profile URl">https://github.com/mushtaqahmad101/</a>
 
 ---
 
