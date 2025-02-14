@@ -1,4 +1,4 @@
-# <strong>[Project Name]</strong> - Plants Disease Detection & Solution Recommendation
+</strong> - Plants Disease Detection & Solution Recommendation
 
 ### <em>Overview</em>
 The <strong>[Project Name]</strong> is an automated web application designed to detect plant diseases from images and recommend appropriate solutions. This multi-class classification model identifies specific diseases from a set of twelve categories. Once the disease is detected, the system provides a solution from a pre-defined database. The project is highly beneficial for early crop disease detection and for offering timely solutions to ensure the health of crops.
